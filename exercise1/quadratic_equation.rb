@@ -17,7 +17,9 @@ elsif discriminant == 0
   x = - b / (2 * a)
   puts "The discriminant is 0. x = #{x}."
 else
-  x1 = (- b + Math.sqrt(discriminant)) / (2 * a)
-  x2 = (- b - Math.sqrt(discriminant)) / (2 * a)
+  disc_sqrt = Math.sqrt(discriminant);
+
+  x1 = (- b + disc_sqrt) / (2 * a)
+  x2 = (- b - disc_sqrt) / (2 * a)
   puts "The discriminant is #{discriminant}. x1 = #{x1}, x2 = #{x2}."
 end
