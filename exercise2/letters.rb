@@ -1,8 +1,11 @@
 alphabet_arr = ('a'..'z').to_a
-alphabet_hash = Hash[(1...alphabet_arr.size).zip alphabet_arr]
-vowels_arr = ['a', 'e', 'i', 'o', 'u', 'y']
+alphabet_hash = {}
+alphabet_arr.each.with_index(1) do |letter, num|
+  alphabet_hash[num] =  letter
+end
 
-vowels_hash = Hash.new
+vowels_arr = ['a', 'e', 'i', 'o', 'u', 'y']
+vowels_hash = {}
 
 alphabet_hash.each do |num, letter|
   if vowels_arr.include? letter 

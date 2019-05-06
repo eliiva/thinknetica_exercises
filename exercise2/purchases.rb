@@ -1,5 +1,5 @@
 stop = false
-purchases = Hash.new
+purchases = {}
 
 until stop
   puts "Укажите название товара:"
