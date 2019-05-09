@@ -11,13 +11,14 @@ class Station
     @trains << train
   end
 
-  def trains_count
-    trains_count = {"freight" => 0, "passenger" => 0}
+   def trains_count
+    trains_count = {}
     @trains.each do |train|
-      if train["type"] == "freight"
-        trains_count["freight"] += 1
+      type = train.type
+      if trains_count[type]
+        trains_count[type] += 1
       else
-        trains_count["passenger"] += 1
+        trains_count[type] = 1
       end
     end
     trains_count
