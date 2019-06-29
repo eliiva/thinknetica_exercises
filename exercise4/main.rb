@@ -7,4 +7,4 @@ require_relative 'route'
 require_relative 'station'
 require_relative 'rails_maker'
 
-rail_station = RailsMaker.new
+RailsMaker.new.start

@@ -1,5 +1,4 @@
 class Station
-
   attr_reader :name, :trains
 
   def initialize(name)
@@ -11,7 +10,7 @@ class Station
     @trains << train
   end
 
-   def trains_count
+  def trains_count
     trains_count = {}
     @trains.each do |train|
       type = train.type
@@ -27,5 +26,4 @@ class Station
   def send_the_train(train)
     @trains.delete(train)
   end
-
 end

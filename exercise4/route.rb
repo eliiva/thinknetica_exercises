@@ -18,5 +18,4 @@ class Route
   def station_list
     [@start_station, @intermediate_stations, @end_station].flatten
   end
-
 end
