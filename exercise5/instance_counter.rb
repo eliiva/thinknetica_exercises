@@ -1,13 +1,10 @@
 module InstanceCounter
   module ClassMethods
-    attr_reader :instances
-    @@instances = 0
-    def instances
-      @@instances
-    end
+    attr_accessor :instances
 
     def add_the_instance
-      @@instances +=1
+      self.instances ||= 0
+      self.instances +=1
     end
 
   end
@@ -23,4 +20,5 @@ module InstanceCounter
     receiver.extend         ClassMethods
     receiver.send :include, InstanceMethods
   end
+
 end
